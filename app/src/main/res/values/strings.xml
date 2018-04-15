@@ -34,6 +34,16 @@
     <string name="altura1">Altura :</string>
     <string name="area_triangulo">Area del triangulo </string>
     <string name="area_rectangulo">Area del rectangulo </string>
+    <string name="esfera">Esfera</string>
+    <string name="esfera_area">Area de la Esfera</string>
+    <string name="cilindro">Cilindro</string>
+    <string name="are_cilindro">Area del cilindro </string>
+    <string name="are_cono">Area del cono </string>
+    <string name="are_cubo">Area del cubo </string>
+    <string name="cono">Cono</string>
+    <string name="cubo">Cubo</string>
+    <string name="area_cubo">Area del Cubo</string>
+    <string name="arista">Valor de la arista</string>
     <string-array name="opciones">
         <item>@string/areas</item>
         <item>@string/volumenes</item>
@@ -45,5 +55,12 @@
         <item>@string/triangulo</item>
         <item>@string/circulo</item>
     </string-array>
+    <string-array name="opciones3">
+        <item>@string/esfera</item>
+        <item>@string/cilindro</item>
+        <item>@string/cono</item>
+        <item>@string/cubo</item>
+    </string-array>
+
 
 </resources>
