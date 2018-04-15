@@ -5,8 +5,13 @@
     <string name="rectangulo">Rectangulo</string>
     <string name="triangulo">Triangulo</string>
     <string name="circulo">Circulo</string>
+
     <string name="volumenes">Volumenes</string>
+
     <string name="op_realizadas">Opciones realizadas</string>
+
+    <string name="resultado">Resultado</string>
+    <string name="area">Area:</string>
 
     <string-array name="opciones">
         <item>@string/areas</item>
