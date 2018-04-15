@@ -22,13 +22,14 @@ public class MainActivity extends AppCompatActivity {
         opc=getResources().getStringArray(R.array.opciones);
         ArrayAdapter<String> adapter = new ArrayAdapter(this,android.R.layout.simple_spinner_item,opc);
 
+
         lv.setAdapter(adapter);
         lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 switch (i){
                     case 0:
-                    in=new Intent(MainActivity.this,Areas.class);
+                        in=new Intent(MainActivity.this,Areas.class);
                         startActivity(in);
                         break;
                     case 1:
@@ -44,5 +45,9 @@ public class MainActivity extends AppCompatActivity {
             }}
 
         );
+
+
+
+
     }
 }

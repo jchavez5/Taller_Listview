@@ -18,7 +18,11 @@
         </activity>
         <activity android:name=".Areas" />
         <activity android:name=".Volumenes" />
-        <activity android:name=".Opciones_realizadas"></activity>
+        <activity android:name=".Opciones_realizadas" />
+        <activity android:name=".Cuadrado" />
+        <activity android:name=".Rectangulo" />
+        <activity android:name=".Triangulo" />
+        <activity android:name=".Circulo"></activity>
     </application>
 
 </manifest>
