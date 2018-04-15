@@ -12,7 +12,28 @@
 
     <string name="resultado">Resultado</string>
     <string name="area">Area:</string>
+    <string name="no">No</string>
+    <string name="operacion">Operacion</string>
+    <string name="dato">Datos</string>
+    <string name="area_cuadrado">Area del cuadrado</string>
+    <string name="datos">Datos</string>
 
+    <string name="valor_lado">Valor del lado:</string>
+    <string name="calcular">Calcular</string>
+    <string name="cuadrado1">Cuadrado</string>
+    <string name="borrar">Borrar</string>
+    <string name="error">No puede estar vacio, el campo</string>
+    <string name="area_circulo"> Radio del circulo</string>
+    <string name="raido">Valor del radio:</string>
+    <string name="circulo1">Circulo</string>
+    <string name="lado">Lado: </string>
+    <string name="radio">Radio :</string>
+    <string name="base">valor de la base</string>
+    <string name="altura">valor de la altura</string>
+    <string name="base1"> Base :</string>
+    <string name="altura1">Altura :</string>
+    <string name="area_triangulo">Area del triangulo </string>
+    <string name="area_rectangulo">Area del rectangulo </string>
     <string-array name="opciones">
         <item>@string/areas</item>
         <item>@string/volumenes</item>

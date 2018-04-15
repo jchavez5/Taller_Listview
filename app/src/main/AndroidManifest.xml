@@ -19,10 +19,10 @@
         <activity android:name=".Areas" />
         <activity android:name=".Volumenes" />
         <activity android:name=".Opciones_realizadas" />
-        <activity android:name=".Rectangulo" />
-        <activity android:name=".Triangulo" />
         <activity android:name=".Circulo" />
         <activity android:name=".Cuadrado" />
+        <activity android:name=".Triangulo" />
+        <activity android:name=".Rectangulo"></activity>
     </application>
 
 </manifest>

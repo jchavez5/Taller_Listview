@@ -15,7 +15,10 @@
             android:id="@+id/textView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="TextView" />
+            android:text="@string/cuadrado1"
+            android:textAlignment="center"
+            android:textSize="30sp"
+            android:textStyle="bold" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -27,7 +30,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="TextView" />
+            android:text="@string/valor_lado"
+            android:textSize="14sp"
+            android:textStyle="bold" />
 
         <EditText
             android:id="@+id/txtLadoCuadrado"
@@ -51,14 +56,15 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:onClick="calcular"
-            android:text="Button" />
+            android:text="@string/calcular" />
 
         <Button
             android:id="@+id/idBorrar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Button" />
+            android:onClick="borrar"
+            android:text="@string/borrar" />
     </LinearLayout>
 
 </LinearLayout>

@@ -1,6 +1,7 @@
 package com.example.josechavez.taller_listview;
 
 import android.content.Intent;
+import android.content.res.Resources;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -14,7 +15,8 @@ public class MainActivity extends AppCompatActivity {
     private ListView lv;
     private String [] opc;
     private Intent in;
-    private EditText txtLadoCuadrado;
+    private EditText txtcaja;
+    private Resources recursos;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,7 +25,6 @@ public class MainActivity extends AppCompatActivity {
         lv=findViewById(R.id.lstOpciones);
         opc=getResources().getStringArray(R.array.opciones);
         ArrayAdapter<String> adapter = new ArrayAdapter(this,android.R.layout.simple_spinner_item,opc);
-
 
         lv.setAdapter(adapter);
         lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -50,5 +51,6 @@ public class MainActivity extends AppCompatActivity {
         );
 
    }
+
 
 }
