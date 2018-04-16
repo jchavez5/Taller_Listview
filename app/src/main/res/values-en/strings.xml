@@ -41,4 +41,5 @@
     <string name="cubo">Cube</string>
     <string name="area_cubo">Area of ​​the Cube</string>
     <string name="arista">Value of the edge</string>
+    <string name="error_1">Value greater than 0</string>
 </resources>

@@ -1,6 +1,8 @@
 package com.example.josechavez.taller_listview;
 
+import android.content.res.Resources;
 import android.widget.EditText;
+
 
 import java.util.ArrayList;
 
@@ -9,6 +11,7 @@ import java.util.ArrayList;
  */
 
 public class Metodos {
+
     public static double areaCuadrado(double lado){return lado*lado;}
     public static double areaCirculo(double radio){return(radio*radio)*Math.PI;}
     public static double areaTriangulo(double base, double altura){return  (base*altura)/2;    }
@@ -17,5 +20,17 @@ public class Metodos {
     public static double volumen_cilindro(double radio, double altura){ return (Math.pow(radio,2)*Math.PI*altura);    }
     public static double volumen_cono(double radio, double altura){ return (Math.pow(radio,2)*Math.PI*altura)/3;   }
     public static double volumen_cubo(double arista){return Math.pow(arista,3);  }
+    public static boolean valida (EditText txt,String error1,String error2){
+        if (txt.getText().toString().equals("")){
+            txt.setError(error1);
+            return false;
+        }
+        if (Double.parseDouble(txt.getText().toString())<=0){
+            txt.setError(error2);
+            return false;
+        }
+        return true;
+    }
+
 
 }

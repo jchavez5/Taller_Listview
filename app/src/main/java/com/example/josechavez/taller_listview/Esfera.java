@@ -15,13 +15,15 @@ public class Esfera extends AppCompatActivity {
         txtEsfera=findViewById(R.id.txtEsfera);
     }
     public void calcular(View v){
-
-        double E=Double.parseDouble(txtEsfera.getText().toString());
-        double resultado=new Metodos().volumen_esfera(E);
-        Figura f=new Figura(getString(R.string.esfera_area),getString(R.string.radio)+E,resultado);
-        f.guardar();
-        Toast.makeText(getApplicationContext(),getString(R.string.resultado)+""+resultado,Toast.LENGTH_SHORT).show();
-
+        if ((Metodos.valida(txtEsfera,getResources().getString(R.string.error),
+                getResources().getString(R.string.error_1)))){
+            double E=Double.parseDouble(txtEsfera.getText().toString());
+            double resultado=new Metodos().volumen_esfera(E);
+            Figura f=new Figura(getResources().getString(com.example.josechavez.taller_listview.R.string.esfera_area),
+                    getResources().getString(com.example.josechavez.taller_listview.R.string.radio)+E,resultado);
+            f.guardar();
+            Toast.makeText(getApplicationContext(),getString(R.string.resultado)+""+resultado,Toast.LENGTH_SHORT).show();
+        }
     }
     public void borrar(View v){
         txtEsfera.setText("");}

@@ -41,4 +41,5 @@ public class Figura {
     public void guardar(){
         Dato.guardar(this);
     }
+
 }

@@ -44,6 +44,7 @@
     <string name="cubo">Cubo</string>
     <string name="area_cubo">Area del Cubo</string>
     <string name="arista">Valor de la arista</string>
+    <string name="error_1">Ingrese valor mayor a cero</string>
     <string-array name="opciones">
         <item>@string/areas</item>
         <item>@string/volumenes</item>

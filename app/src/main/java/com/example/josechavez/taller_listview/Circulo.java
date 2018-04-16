@@ -16,13 +16,14 @@ public class Circulo extends AppCompatActivity {
         txtCirculo=findViewById(R.id.txtCirculo);
     }
     public void calcular(View v){
-
-        double l=Double.parseDouble(txtCirculo.getText().toString());
-        double resultado=new Metodos().areaCirculo(l);
-        Figura f=new Figura(getString(R.string.area_circulo),getString(R.string.radio)+":"+l,resultado);
-        f.guardar();
-        Toast.makeText(getApplicationContext(),getString(R.string.resultado)+resultado,Toast.LENGTH_SHORT).show();
-
+        if ((Metodos.valida(txtCirculo,getResources().getString(R.string.error),
+                getResources().getString(R.string.error_1)))){
+            double l=Double.parseDouble(txtCirculo.getText().toString());
+            double resultado=new Metodos().areaCirculo(l);
+            Figura f=new Figura(getResources().getString(com.example.josechavez.taller_listview.R.string.area_circulo),getResources().getString(com.example.josechavez.taller_listview.R.string.radio)+":"+l,resultado);
+            f.guardar();
+            Toast.makeText(getApplicationContext(),getString(R.string.resultado)+resultado,Toast.LENGTH_SHORT).show();
+        }
     }
     public void borrar(View v){
         txtCirculo.setText("");

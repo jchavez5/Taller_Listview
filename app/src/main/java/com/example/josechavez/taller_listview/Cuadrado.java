@@ -21,14 +21,16 @@ public class Cuadrado extends AppCompatActivity {
 
          }
         public void calcular(View  v){
-
-                double l=Double.parseDouble(txtLadoCuadrado.getText().toString());
+            if (Metodos.valida(txtLadoCuadrado,getResources().getString(R.string.error),getResources().getString(R.string.error_1))){
+               double l=Double.parseDouble(txtLadoCuadrado.getText().toString());
                 double resultado=new Metodos().areaCuadrado(l);
-                Figura f=new Figura(getString(R.string.area_cuadrado),getString(R.string.dato)+l,resultado);
+                Figura f=new Figura(getResources().getString(com.example.josechavez.taller_listview.R.string.area_cuadrado),
+                        getResources().getString(com.example.josechavez.taller_listview.R.string.dato)+l,resultado);
                 f.guardar();
-                Toast.makeText(getApplicationContext(),getString(R.string.resultado)+resultado,Toast.LENGTH_SHORT).show();
-
+                Toast.makeText(getApplicationContext(),getResources().getString(R.string.resultado)+resultado,Toast.LENGTH_SHORT).show();
+           }
         }
+
         public void borrar(View v){
             txtLadoCuadrado.setText("");
         }

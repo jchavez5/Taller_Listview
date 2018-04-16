@@ -17,14 +17,16 @@ public class Rectangulo extends AppCompatActivity {
         txtAltura=findViewById(R.id.txtAlturac);
     }
     public void calcular(View v){
-
-        double b=Double.parseDouble(txtBase.getText().toString());
-        double a=Double.parseDouble(txtAltura.getText().toString());
-        double resultado=new Metodos().areaRectangulo(b,a);
-        Figura f=new Figura(getString(R.string.area_triangulo),getString(R.string.base1)+b+""+getString(R.string.altura1)+a,resultado);
-        f.guardar();
-        Toast.makeText(getApplicationContext(),getString(R.string.resultado)+resultado,Toast.LENGTH_SHORT).show();
-
+        if ((Metodos.valida(txtBase,getResources().getString(R.string.error),
+                getResources().getString(R.string.error_1)))&&(Metodos.valida(txtAltura,getResources().getString(R.string.error),
+                getResources().getString(R.string.error_1)))){
+            double b=Double.parseDouble(txtBase.getText().toString());
+            double a=Double.parseDouble(txtAltura.getText().toString());
+            double resultado=new Metodos().areaRectangulo(b,a);
+            Figura f=new Figura(getString(R.string.area_triangulo),getString(R.string.base1)+b+"\n"+getString(R.string.altura1)+a,resultado);
+            f.guardar();
+            Toast.makeText(getApplicationContext(),getString(R.string.resultado)+resultado,Toast.LENGTH_SHORT).show();
+        }
     }
     public void borrar(View v){
         txtAltura.setText("");

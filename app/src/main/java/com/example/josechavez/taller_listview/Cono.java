@@ -12,17 +12,22 @@ public class Cono extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cono);
+        txtRadio=findViewById(R.id.txtCcono);
+        txtAltura=findViewById(R.id.txtAltura);
+
     }
     public void calcular(View v){
-
-        double R=Double.parseDouble(txtRadio.getText().toString());
-        double A=Double.parseDouble(txtAltura.getText().toString());
-        double resultado=new Metodos().volumen_cono(R,A);
-        Figura f=new Figura(getResources().getString(com.example.josechavez.taller_listview.R.string.area_circulo),getResources().getString(com.example.josechavez.taller_listview.R.string.radio)+R
-                +"\n"+getResources().getString(com.example.josechavez.taller_listview.R.string.altura)+A,resultado);
-        f.guardar();
-        Toast.makeText(getApplicationContext(),getResources().getString(com.example.josechavez.taller_listview.R.string.resultado)+""+resultado,Toast.LENGTH_SHORT).show();
-
+        if ((Metodos.valida(txtRadio,getResources().getString(R.string.error),
+                getResources().getString(R.string.error_1)))&&(Metodos.valida(txtAltura,getResources().getString(R.string.error),
+                getResources().getString(R.string.error_1)))){
+            double R=Double.parseDouble(txtRadio.getText().toString());
+            double A=Double.parseDouble(txtAltura.getText().toString());
+            double resultado=new Metodos().volumen_cono(R,A);
+            Figura f=new Figura(getResources().getString(com.example.josechavez.taller_listview.R.string.area_circulo),getResources().getString(com.example.josechavez.taller_listview.R.string.radio)+R
+                    +"\n"+getResources().getString(com.example.josechavez.taller_listview.R.string.altura)+A,resultado);
+            f.guardar();
+            Toast.makeText(getApplicationContext(),getResources().getString(com.example.josechavez.taller_listview.R.string.resultado)+""+resultado,Toast.LENGTH_SHORT).show();
+        }
     }
     public void borrar(View v){
         txtRadio.setText("");
