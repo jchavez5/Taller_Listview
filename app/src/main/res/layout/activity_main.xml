@@ -16,5 +16,8 @@
             <ListView
                 android:id="@+id/lstOpciones"
                 android:layout_width="match_parent"
+                android:textAlignment="center"
+                android:textSize="32sp"
+                android:textStyle="bold"
                 android:layout_height="match_parent" />
         </LinearLayout>
